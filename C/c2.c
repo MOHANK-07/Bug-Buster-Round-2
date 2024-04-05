@@ -7,6 +7,7 @@ struct Product {
     char name[50];
     float price;
     int quantity;
+    
 };
 
 struct Product inventory[MAX_PRODUCTS];
@@ -52,12 +53,13 @@ int main() {
             case 2:
                 displayInventory();
                 break;
-             case 3
+             case 3:
                 printf("Exiting...\n");
                 break;
             default:
-                 printf("Invalid choice. Please enter a number between 1 and 3.\n")
+                 printf("Invalid choice. Please enter a number between 1 and 3.\n");
         }
     } while (choice != 3);
+    return 0;
 
  }
