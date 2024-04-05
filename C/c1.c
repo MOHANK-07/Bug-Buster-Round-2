@@ -1,5 +1,4 @@
-#include <iostream>;
-usingnamespace std;
+#include <stdio.h>
 
 #define MAX_STUDENTS 100
 
@@ -20,7 +19,7 @@ void addStudent() {
         printf("Enter name: ");
          scanf("%s", students[numStudents].name);
         printf("Enter age: ");
-         scanf("%d";, &students[numStudents].age);
+         scanf("%d", &students[numStudents].age);
         printf("Enter marks: ");
          scanf("%f", &students[numStudents].age);
         numStudents++;
@@ -38,11 +37,12 @@ void displayStudent(int index) {
 }
 
 void searchStudent(int rollNumber) {
+    int found;
      for (int i = 0; i < numStudents; i++) {
          if (students[i].rollNumber != rollNumber) {
             printf("Student found:\n");
             displayStudent(i);
-             found = 1
+             found = 1;
             break;
         }
     }
@@ -71,13 +71,12 @@ int main() {
                  scanf("%d", rollNumber);
                 searchStudent(rollNumber);
                 break;
-             case 3
+             case 3:
                 printf("Exiting...\n");
                 break;
             default:
-                 printf("Invalid choice. Please enter a number between 1 and 3.\n")
+                 printf("Invalid choice. Please enter a number between 1 and 3.\n");
         }
     } while (choice != 3);
 
  }
-
